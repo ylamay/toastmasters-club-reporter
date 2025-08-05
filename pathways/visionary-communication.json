@@ -1,0 +1,575 @@
+{
+    "pathway_info": {
+        "name": "Visionary Communication",
+        "description": "The Visionary Communications path helps build your skills as a strategic communicator and leader. The projects on this path focus on developing your skills for sharing information with a group, planning communications and creating innovative solutions. Speech writing and speech delivery are emphasized in each project. This path culminates in the development and launch of a long-term personal or professional vision.",
+        "competencies": [
+            "Strategic communication",
+            "Leadership skills",
+            "Information sharing",
+            "Communication planning",
+            "Innovative solutions",
+            "Speech writing",
+            "Speech delivery",
+            "Vision development"
+        ],
+        "total_levels": 5,
+        "source_url": "https://d4tm.org/toastmasters-pathways/paths-and-projects#visionary-communication",
+        "source": "https://d4tm.org/toastmasters-pathways/paths-and-projects"
+    },
+    "levels": {
+        "Level 1": {
+            "title": "Mastering Fundamentals",
+            "source_url": "https://d4tm.org/toastmasters-pathways/paths-and-projects#level-1-6",
+            "projects": [
+                {
+                    "name": "Ice breaker",
+                    "purpose": "The purpose of this project is to introduce yourself to the club and learn the basic structure of a public speech.",
+                    "overview": "Write and deliver a speech about any topic to introduce yourself to the club. Your speech may be humorous, informational, or any other style that appeals to you.",
+                    "duration": "4-6 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "A 4- to 6-minute speech"
+                    ]
+                },
+                {
+                    "name": "Writing a Speech with Purpose",
+                    "purpose": "The purpose of this project is to learn or review basic research methods and present a well-organized, well-researched speech on any topic.",
+                    "overview": "Select a topic that you are not already familiar with or that you wish to learn more about. Be sure your topic is narrow enough to be an effective 5- to 7-minute speech.",
+                    "duration": "5-7 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "Researching a topic",
+                        "The Research Worksheet",
+                        "The Speech Outline Worksheet",
+                        "A 5- to 7-minute speech"
+                    ]
+                },
+                {
+                    "name": "Introduction to Vocal Variety and Body Language",
+                    "purpose": "The purpose of this project is to practice using vocal variety or body language to enhance a speech.",
+                    "overview": "Learn or review the importance of vocal variety and body language. Present a 5- to 7-minute speech on any topic at a club meeting.",
+                    "duration": "5-7 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "An option for three types of evaluations. The member may choose to be evaluated on only their body language, only their vocal variety, or both",
+                        "A 5- to 7-minute speech"
+                    ]
+                },                
+                {
+                    "name": "Evaluation and Feedback",
+                    "purpose": "The purpose of this project is to present a speech on any topic, receive feedback, and apply the feedback to a second speech.",
+                    "overview": "Choose any topic for your first 5- to 7-minute speech. After your speech, carefully review your feedback. At a different club meeting, present a 5- to 7-minute speech in which you incorporate feedback from your first speech. You may choose to present the same speech again or a new speech. Your second speech should reflect some or all of the feedback from your first speech. Finally, after you have completed both speeches, serve as an evaluator at a club meeting and deliver constructive feedback about another member's presentation.",
+                    "duration": "Two 5-7 minute speeches plus serving as evaluator",
+                    "type": "speech_and_evaluation",
+                    "required": true,
+                    "includes": [
+                        "A 5- to 7-minute speech",
+                        "Incorporating feedback from your first speech into a second 5- to 7-minute speech",
+                        "Serving as a speech evaluator"
+                    ]
+                },
+                {
+                    "name": "Researching and Presenting",
+                    "purpose": "The purpose of this project is to learn or review basic research methods and present a well-organized, well-researched speech on any topic.",
+                    "overview": "Select a topic that you are not already familiar with or that you wish to learn more about. Be sure your topic is narrow enough to be an effective 5- to 7-minute speech. Research the topic and begin organizing the information, as described in this project. Practice your speech and continue to refine its organization. Present your speech at a club meeting.",
+                    "duration": "5-7 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "Researching a topic",
+                        "The Research Worksheet",
+                        "The Speech Outline Worksheet",
+                        "A 5- to 7-minute speech"
+                    ]
+                }
+            ]
+        },
+        "Level 2": {
+            "title": "Learning Your Style",
+            "source_url": "https://d4tm.org/toastmasters-pathways/paths-and-projects#level-2-6",
+            "projects": [
+                {
+                    "name": "Understanding Your Leadership Style",
+                    "purpose": "The purpose of this project is to identify your primary leadership style or styles.",
+                    "overview": "Complete the Discover Your Leadership Style questionnaire. Consider how your leadership style impacts the people around you and how you can adjust it to more effectively lead people with styles different from your own. Deliver a 5- to 7-minute speech at a club meeting to share some aspect of your leadership style or leadership styles in general. You may choose to discuss your style preferences when working with others, your style and how you can adapt it to situations, or leadership styles in general and how they impact a group.",
+                    "duration": "5-7 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "The Discover Your Leadership Style questionnaire",
+                        "A 5- to 7-minute speech"
+                    ]
+                },
+                {
+                    "name": "Understanding Your Communication Style",
+                    "purpose": "The purpose of this project is to learn about different communication styles and identify your primary style.",
+                    "overview": "Complete the Discover Your Communication Style questionnaire to help you identify your style. Deliver a 5- to 7-minute speech at a club meeting about your communication style and its impact on your professional and/or personal relationships. If you are uncomfortable discussing your communication style, you may speak about the communication styles you have encountered and how they impact you. Your speech should not be a report of the content of this project.",
+                    "duration": "5-7 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "The Discover Your Communication Style questionnaire",
+                        "A 5- to 7-minute speech"
+                    ]
+                },
+                {
+                    "name": "Introduction to Toastmasters Mentoring",
+                    "purpose": "The purpose of this project is to clearly define how Toastmasters envisions mentoring.",
+                    "overview": "Write and present a 5- to 7-minute speech about a time when you were a protégé. Share the impact and importance of having a mentor. This speech is not a report on the content of this project.",
+                    "duration": "5-7 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "A 5- to 7-minute speech"
+                    ]
+                }
+            ]
+        },
+        "Level 3": {
+            "title": "Increasing Knowledge",
+            "source_url": "https://d4tm.org/toastmasters-pathways/paths-and-projects#level-3-6",
+            "projects": [
+                {
+                    "name": "Develop a Communication Plan",
+                    "purpose": "The purpose of this project is to practice the skills needed to motivate team members through the completion of a project.",
+                    "overview": "Build a team of three to four people to help you create and complete a project to benefit your club. Use the information in the project to develop motivational strategies for each team member. After the project, you may choose to ask team members and at least one club officer to complete a 360° evaluation to give you feedback on your communication and leadership. Deliver a 5- to 7-minute speech at a club meeting about your experience.",
+                    "duration": "5-7 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "Building and motivating a team to complete a project that benefits your club",
+                        "The Team-Building Activities resource",
+                        "The 360° Evaluation resource",
+                        "A 5- to 7-minute speech"
+                    ]
+                },
+                {
+                    "name": "Electives",
+                    "description": "Choose 2 elective projects from the available options to complete Level 3",
+                    "type": "elective",
+                    "required": true,
+                    "electives_required": 2,
+                    "elective_options": [
+                        {
+                            "name": "Deliver Social Speeches",
+                            "purpose": "The purpose of this project is to practice delivering social speeches in front of your club members.",
+                            "overview": "Develop two different social speeches—each 3 to 4 minutes—and present them at two separate club meetings. You may choose any two types of social speeches that appeal to you or that you would like to practice.",
+                            "duration": "Two 3-4 minute speeches",
+                            "type": "speech",
+                            "includes": [
+                                "The Social Speech Basics resource",
+                                "Two 3- to 4-minute speeches"
+                            ]
+                        },
+                        {
+                            "name": "Using Presentation Software",
+                            "purpose": "The purpose of this project is to introduce or review basic presentation software strategies for creating and using slides to support or enhance a speech.",
+                            "overview": "Select a speech topic that lends well to a visual presentation using technology. Use the content of this project and your own research to help you develop your slides. Give a 5- to 7-minute speech using the slides you developed. Your speech can be humorous, demonstrative, or informational, and it may include stories or anecdotes.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "Developing presentation slides",
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Connect with Storytelling",
+                            "purpose": "The purpose of this project is to practice using a story within a speech or giving a speech that is a story.",
+                            "overview": "Choose an established story, a story about your life, or a fictional tale of your own creation. Deliver the 5- to 7-minute speech at a club meeting.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Creating Effective Visual Aids",
+                            "purpose": "The purpose of this project is to practice selecting and using a variety of visual aids during a speech.",
+                            "overview": "Choose a speech topic that lends itself well to using visual aids. Create at least one but no more than three visual aids to enhance your presentation. Deliver your 5- to 7-minute presentation at a club meeting.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "Creating one to three visual aids",
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Using Descriptive Language",
+                            "purpose": "The purpose of this project is to practice writing a speech with an emphasis on adding language to increase interest and impact.",
+                            "overview": "You may speak on any topic. Develop a 5- to 7-minute speech describing the topic in detail and present it at your club meeting.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Connect with Your Audience",
+                            "purpose": "The purpose of this project is to practice the skills needed to connect with an unfamiliar audience.",
+                            "overview": "Develop a 5- to 7-minute speech on a topic that is unfamiliar to the majority of your audience. Because you deliver this speech in your Toastmasters club, you are familiar with the audience members' preferences and personalities. Selecting a topic that is new or unfamiliar to your club members will allow you to practice adapting as you present. As you speak, monitor the audience's reaction to your topic and adapt as necessary to maintain engagement.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Make Connections Through Networking",
+                            "purpose": "The purpose of this project is to develop and practice a personal strategy for building connections through networking.",
+                            "overview": "Prepare for and attend a networking event. After the event, present a 5- to 7-minute speech to your club. Your speech can include a story or stories about your experience, a description of what you learned, or a discussion on the benefits of networking. Your speech may be personal to you or informational about networking. If you attend a non-Toastmasters event, you must sign the Project Completion Form and give it to your vice president education.",
+                            "duration": "5-7 minutes",
+                            "type": "speech_and_project",
+                            "includes": [
+                                "The Prepare to Network resource",
+                                "Attending a networking event",
+                                "The Project Completion Form",
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Focus on the Positive",
+                            "purpose": "The purpose of this project is to practice being aware of your thoughts and feelings, as well as the impact of your responses on others.",
+                            "overview": "Keep a daily record of your moods and attitudes for a minimum of two weeks, noting when you feel positive or negative, your successes and efforts, and three things for which you are grateful. Record and evaluate any changes in your behavior or the behavior of those around you. At a club meeting, share some aspect of your experience. You may choose to schedule a 2-to 3-minute report or a 5-to 7-minute speech. After completing your speech, submit your signed Project Completion Form to your vice president education to indicate you completed the journal.",
+                            "duration": "2-3 minute report or 5-7 minute speech plus 2+ weeks of journaling",
+                            "type": "speech_and_project",
+                            "includes": [
+                                "Recording your daily moods and attitudes for a minimum of two weeks",
+                                "A 2- to 3-minute report or a 5- to 7-minute speech",
+                                "The Project Completion Form"
+                            ]
+                        },
+                        {
+                            "name": "Inspire Your Audience",
+                            "purpose": "The purpose of this project is to practice writing and delivering a speech that inspires others.",
+                            "overview": "Select a topic with the intent of inspiring your audience and prepare a 5- to 7-minute speech for your club.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Prepare for an Interview",
+                            "purpose": "The purpose of this project is to practice the skills needed to present yourself well in an interview.",
+                            "overview": "Determine which type of interview you would like to practice, such as a job or expert interview. Prepare by reviewing your skills and abilities. Complete the resources in the project and give them to your interviewer before your presentation. You determine which member of your club interviews you, but your interviewer must be someone other than your evaluator. In a 5- to 7-minute role-play presentation at a club meeting, practice answering interview questions to promote your skills, abilities, and experience.",
+                            "duration": "5-7 minutes",
+                            "type": "role_play",
+                            "includes": [
+                                "The Identifying Your Skills Worksheet",
+                                "The Interviewer Instructions resource",
+                                "A 5- to 7-minute role-play interview at a club meeting"
+                            ]
+                        },
+                        {
+                            "name": "Understanding Vocal Variety",
+                            "purpose": "The purpose of this project is to practice using vocal variety to enhance a speech.",
+                            "overview": "Learn or review the importance of vocal variety. Use the exercises in this project to improve your vocal variety skills. Then, present a 5- to 7-minute speech on any topic at a club meeting. The primary focus of the evaluation is your vocal variety.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Effective Body Language",
+                            "purpose": "The purpose of this project is to deliver a speech with awareness of your intentional and unintentional body language, as well as to learn, practice, and refine how you use nonverbal communication when delivering a speech.",
+                            "overview": "Prepare a 5- to 7-minute speech on a topic that lends itself to expression through your movement and gestures. Video record your presentation and get feedback from your mentor or another reviewer before speaking to your club. If you do not have access to a recording device, perform your speech in front of a mirror and make adjustments before your scheduled speech.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Active Listening",
+                            "purpose": "The purpose of this project is to demonstrate your ability to listen to what others say.",
+                            "overview": "At a club meeting, fulfill the role of Topicsmaster. As Topicsmaster, comment on each speaker's Table Topics® speech to demonstrate your active listening skills. For example, you might say, \"Thank you. That was a compelling opinion on the benefits of gardening. I understand you feel strongly that everyone needs to spend some time doing something they love.\"",
+                            "duration": "Variable (Topicsmaster role)",
+                            "type": "meeting_role",
+                            "includes": [
+                                "Serving as Topicsmaster at a club meeting"
+                            ]
+                        },
+                        {
+                            "name": "Know Your Sense of Humor",
+                            "purpose": "The purpose of this project is to begin developing a collection of humorous stories and to present a speech that includes humor.",
+                            "overview": "Give a 5- to 7-minute speech on a topic of your choosing. Your speech should include at least one anecdote or story intended to entertain or bring humor into your presentation.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Researching and Presenting",
+                            "purpose": "The purpose of this project is to learn or review basic research methods and present a well-organized, well-researched speech on any topic.",
+                            "overview": "Select a topic that you are not already familiar with or that you wish to learn more about. Be sure your topic is narrow enough to be an effective 5- to 7-minute speech. Research the topic and begin organizing the information, as described in this project. Practice your speech and continue to refine its organization. Present your speech at a club meeting.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "required": true,
+                            "includes": [
+                                "Researching a topic",
+                                "The Research Worksheet",
+                                "The Speech Outline Worksheet",
+                                "A 5- to 7-minute speech"
+                            ]
+                        }                        
+                    ]
+                }
+            ]
+        },
+        "Level 4": {
+            "title": "Building Skills",
+            "source_url": "https://d4tm.org/toastmasters-pathways/paths-and-projects#level-4-6",
+            "projects": [
+                {
+                    "name": "Communicate Change",
+                    "purpose": "The purpose of this project is to practice the skills needed to effectively communicate change to a group or organization.",
+                    "overview": "Develop a plan for communicating a change to an audience affected by the change. At a club meeting, communicate the change in a 5- to 7-minute speech.",
+                    "duration": "5-7 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "Developing a plan for communicating change",
+                        "A 5- to 7-minute speech"
+                    ]
+                },
+                {
+                    "name": "Electives",
+                    "description": "Choose 1 elective project from the available options to complete Level 4",
+                    "type": "elective",
+                    "required": true,
+                    "electives_required": 1,
+                    "elective_options": [
+                        {
+                            "name": "Create a Podcast",
+                            "purpose": "The purpose of this project is to introduce you to the skills needed to organize and present a podcast.",
+                            "overview": "Use this project and your own research to create a podcast. Record a minimum of 60 minutes of content. You are free to divide the episodes as you choose. Each separate episode must be at least 10 minutes, but may be longer if it fits your topic and style. After you record all content, play a 5- to 10-minute segment in your club. Introduce the segment in a 2- to 3-minute speech.",
+                            "duration": "2-3 minutes (introduction speech)",
+                            "type": "speech_and_podcast",
+                            "includes": [
+                                "Recording 60 minutes of podcast content",
+                                "A 2- to 3-minute introduction speech"
+                            ]
+                        },
+                        {
+                            "name": "Building a Social Media Presence",
+                            "purpose": "The purpose of this project is to apply your understanding of social media to enhance an established or new social media presence.",
+                            "overview": "Use this project and your own research to build a new social media presence or enhance an existing presence. You may focus on a personal goal (such as connecting with old friends or promoting a blog) or on a professional goal (such as promoting a business or organization). Use the tools you identify as best for you and your purpose. After you achieve your goal, deliver a 5- to 7-minute speech to your club about your results, experience, and the benefits of social media.",
+                            "duration": "5-7 minutes",
+                            "type": "speech_and_project",
+                            "includes": [
+                                "Establishing or enhancing a social media presence",
+                                "The Project Completion Form",
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Managing a Difficult Audience",
+                            "purpose": "The purpose of this project is to practice the skills needed to address audience challenges when you present outside of your Toastmasters club.",
+                            "overview": "Prepare a 5- to 7-minute speech on a topic of your choosing. You may write a new speech or use a speech you presented previously. You will be evaluated on the way you manage audience disruptions, not the content of your speech. Before your club meeting, send the Role Play Assignments resource to the Toastmaster and vice president education. As you present your speech, respond to different types of difficult audience members that disrupt you. The process of speaking and responding to audience members will take 12 to 15 minutes.",
+                            "duration": "12-15 minutes (5-7 minute speech plus role play)",
+                            "type": "role_play",
+                            "includes": [
+                                "A role play assignment for club members",
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Write a Compelling Blog",
+                            "purpose": "The purpose of this project is to review or introduce the skills needed to write and maintain a blog.",
+                            "overview": "Post a minimum of eight blog posts in one month. Your blog may be new or one you have already established. You must receive approval from the vice president education to blog on behalf of your club. Deliver a 2- to 3-minute speech at a club meeting about the impact of your blogging experience. You may choose to have your blog evaluated by members of the club.",
+                            "duration": "2-3 minutes",
+                            "type": "speech_and_project",
+                            "includes": [
+                                "Maintaining a blog and posting at least eight times in one month",
+                                "The Blog Evaluation Form",
+                                "The Project Completion Form",
+                                "A 2- to 3-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Manage Online Meetings",
+                            "purpose": "The purpose of this project is to practice facilitating an online meeting or leading a webinar.",
+                            "overview": "Conduct a 20- to 25-minute online meeting with fellow Toastmasters or a 20- to 25-minute webinar with visual aids for fellow Toastmasters. You determine the topic of your meeting or webinar. Research and use software that best fits your needs and geographic area. Invite your evaluator to participate in the online meeting or webinar.",
+                            "duration": "20-25 minutes",
+                            "type": "online_meeting",
+                            "includes": [
+                                "The Online Meeting Agenda resource",
+                                "The Online Meeting Basics resource",
+                                "Planning and conducting a 20- to 25-minute online meeting or webinar"
+                            ]
+                        },
+                        {
+                            "name": "Question-and-Answer Session",
+                            "purpose": "The purpose of this project is to learn about and practice facilitating a question-and-answer session.",
+                            "overview": "Select a topic of which you are particularly knowledgeable. Prepare and deliver a speech on this topic, followed by a question-and-answer session. Together, the speech and question-and-answer session must be 15 to 20 minutes. Use your time effectively to ensure both segments are completed.",
+                            "duration": "15-20 minutes total",
+                            "type": "speech_and_qa",
+                            "includes": [
+                                "A 5-to 7-minute speech",
+                                "A question-and-answer session after the speech"
+                            ]
+                        },
+                        {
+                            "name": "Public Relations Strategies",
+                            "purpose": "The purpose of this project is to practice the skills needed to effectively use public relations strategies for any group or situation.",
+                            "overview": "Create a public relations plan for a real or hypothetical group or situation. If it involves your club, it must be hypothetical unless you communicate with the vice president public relations and club president. Share your plan in a 5- to 7-minute speech at a club meeting. This speech is not a report on the content of this project, but an example of how you will or might apply what you learned.",
+                            "duration": "5-7 minutes",
+                            "type": "speech",
+                            "includes": [
+                                "Creating a public relations strategy",
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Manage Projects Successfully",
+                            "purpose": "The purpose of this project is to practice developing a plan, building a team, and fulfilling the plan with the help of your team.",
+                            "overview": "Form a team of three to four people and choose a project. Create a plan for your project and present the plan to your club in a 2- to 3-minute speech. Work with your team to complete your project. Present a 5- to 7-minute speech about your experience. This speech may be humorous, informational, or any type of speech that appeals to you. It should not be a report about the content of this project, but a reflection of your experience applying what you learned.",
+                            "duration": "2-3 minute speech + 5-7 minute speech",
+                            "type": "project_management",
+                            "includes": [
+                                "Building a team",
+                                "Creating a project plan",
+                                "The Project Plan resource",
+                                "A 2- to 3-minute speech about your plan",
+                                "Completing the plan with your team",
+                                "A 5- to 7-minute speech about your experience"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "Level 5": {
+            "title": "Demonstrating Expertise",
+            "source_url": "https://d4tm.org/toastmasters-pathways/paths-and-projects#level-5-6",
+            "projects": [
+                {
+                    "name": "Develop Your Vision",
+                    "purpose": "The purpose of this project is to develop a detailed vision for your personal life, professional life, or an organization.",
+                    "overview": "Develop a vision and present it at a club meeting in a 5- to 7-minute speech. Establish a timeline for implementing your plan using the resources included in this project. Deliver another 5- to 7-minute speech at a later meeting to present your plan to bring your vision to fruition.",
+                    "duration": "5-7 minutes (two speeches)",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "Developing a vision and establishing a plan to implement it",
+                        "The Idea Map Worksheet",
+                        "The Goal Setting Worksheet",
+                        "The Goal Task List",
+                        "The Vision Plan resource",
+                        "A 5- to 7-minute speech",
+                        "The Project Completion Form"
+                    ]
+                },
+                {
+                    "name": "Reflect on Your Path",
+                    "purpose": "The purpose of this project is to reflect on your growth during the completion of an entire path.",
+                    "overview": "At a club meeting, present a 10- to 12-minute speech to share your experience completing your path. Use this as an opportunity to reflect on how far you have come, summarize the skills you have learned and developed, and to celebrate your achievements. Your speech can be humorous, informational, or any style that that appeals to you and supports your speech content.",
+                    "duration": "10-12 minutes",
+                    "type": "speech",
+                    "required": true,
+                    "includes": [
+                        "The Your Toastmasters Journey resource",
+                        "A 10- to 12-minute speech"
+                    ]
+                },
+                {
+                    "name": "Electives",
+                    "description": "Choose 1 elective project from the available options to complete Level 5",
+                    "type": "elective",
+                    "required": true,
+                    "electives_required": 1,
+                    "elective_options": [
+                        {
+                            "name": "Lessons Learned",
+                            "purpose": "The purpose of this project is to learn about and apply the skills needed to run a lessons learned meeting during a project or after its completion.",
+                            "overview": "Facilitate a lessons learned meeting for a team with which you are completing or have completed a project. This meeting is separate from your regular Toastmasters meeting. Organize and facilitate a discussion. Record the results into a document you and your team members can use to facilitate the current project or future projects. If you haven't already, give team members an opportunity to complete a 360° evaluation of you as a team leader. Finally, present a 5- to 7-minute speech in your club about the lessons learned meeting or your leadership experience.",
+                            "duration": "5-7 minutes (speech)",
+                            "type": "facilitation_and_speech",
+                            "includes": [
+                                "Facilitating a lessons learned meeting",
+                                "Documenting the results of the lessons learned meeting",
+                                "The 360° Evaluation resource",
+                                "The Lessons Learned Response Log",
+                                "The Metrics Log",
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Moderate a Panel Discussion",
+                            "purpose": "The purpose of this project is to apply your skills as a public speaker and leader to facilitate a panel discussion.",
+                            "overview": "Plan and moderate a 20- to 40-minute panel discussion. The panel discussion can be on any topic and may take place at a club meeting or outside of Toastmasters with the approval of your vice president education. Toastmasters who participate as panelists do not receive credit in Toastmasters Pathways. When you have the opportunity, volunteer to act as a panelist for another member completing this project.",
+                            "duration": "20-40 minutes",
+                            "type": "moderation",
+                            "includes": [
+                                "Planning and moderating a 20- to 40-minute panel discussion",
+                                "The Panelist Basics resource",
+                                "The Project Completion Form"
+                            ]
+                        },
+                        {
+                            "name": "Ethical Leadership",
+                            "purpose": "The purpose of this project is to develop a clear understanding of your own ethical framework and create an opportunity for others to hear about and discuss ethics in your organization or community.",
+                            "overview": "Define an ethical framework for yourself. To do this, you may need to complete personal research beyond the contents of this project. Then, organize and moderate a 20- to 40-minute panel discussion about ethics, followed by a question-and-answer session. If you have never facilitated a panel discussion, review the \"Moderate a Panel Discussion\" elective project.",
+                            "duration": "20-40 minutes",
+                            "type": "panel_discussion_and_qa",
+                            "includes": [
+                                "The Ethical Framework resource",
+                                "Organizing and moderating a panel discussion as well as a question-and-answer session"
+                            ]
+                        },
+                        {
+                            "name": "High Performance Leadership",
+                            "purpose": "The purpose of this project is to apply your leadership and planning knowledge to develop a project plan, organize a guidance committee, and implement your plan with the help of a team.",
+                            "overview": "Select a project to complete with a team of at least three other members. Form a guidance committee and meet at least five times through the duration of the project. Deliver a 5-to 7-minute speech at a club meeting to introduce your plan and vision. After you implement the plan, deliver a second 5- to 7-minute speech at a club meeting to share your experience developing and completing your plan.",
+                            "duration": "5-7 minutes (two speeches)",
+                            "type": "project_leadership_and_speeches",
+                            "includes": [
+                                "Selecting, leading, and completing a project with a team",
+                                "Forming and meeting with a guidance committee at least five times",
+                                "The Guidance Committee Introduction resource",
+                                "The Meeting Agenda resource",
+                                "The Project Plan Overview resource",
+                                "The Project Plan resource",
+                                "The Vision Plan resource",
+                                "The Event Planning Worksheet",
+                                "The 360° Evaluation resource",
+                                "Two 5- to 7-minute speeches"
+                            ]
+                        },
+                        {
+                            "name": "Leading in Your Volunteer Organization",
+                            "purpose": "The purpose of this project is to apply the skills needed to successfully lead in a volunteer organization.",
+                            "overview": "Serve in a leadership role in Toastmasters or another volunteer organization for at least six months. You may complete this project based on your employment, but a volunteer organization is preferable. Ask members of the organization to complete a 360° evaluation of your leadership skills. Create a succession plan to aid in the transition after you leave your position of leadership. After your six-month term, deliver a 5- to 7-minute speech at a club meeting to reflect on your personal experience.",
+                            "duration": "5-7 minutes (speech)",
+                            "type": "volunteer_leadership_and_speech",
+                            "includes": [
+                                "Serving in a volunteer leadership role for a minimum of six months",
+                                "Conducting a 360° evaluation of your leadership skills",
+                                "Creating a succession plan",
+                                "The Succession Plan resource",
+                                "The 360° Evaluation resource",
+                                "A 5- to 7-minute speech"
+                            ]
+                        },
+                        {
+                            "name": "Prepare to Speak Professionally",
+                            "purpose": "The purpose of this project is to practice developing and presenting a longer speech.",
+                            "overview": "Write and present an 18- to 22-minute keynote-style speech. Exemplify the point of view or message you would convey as a professional-level speaker. You may choose to use visual aids if they fit your speech and your style. Your speech may be humorous, informational, or any style that appeals to you and supports your speech content. If you receive advance approval from the vice president education, you may present your speech to a non- Toastmasters group.",
+                            "duration": "18-22 minutes",
+                            "type": "keynote_speech",
+                            "includes": [
+                                "The Speech Outline Worksheet",
+                                "An 18- to 22-minute keynote-style speech"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

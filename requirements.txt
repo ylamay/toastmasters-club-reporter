@@ -1,0 +1,8 @@
+# requirements.txt file if not using uv CLI
+playwright
+openpyxl
+python-dotenv
+urllib3
+requests
+reportlab
+pandaa
