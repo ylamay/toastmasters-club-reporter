@@ -1,0 +1,101 @@
+{
+    "pathways_index": {
+        "source": [
+            "https://d4tm.org/toastmasters-pathways",
+            "https://westsidetoastmasters.com/education/pathways.shtml"
+        ],
+        "last_updated": "2025-07-29",
+        "available_pathways": [
+            {
+                "name": "Dynamic Leadership",
+                "filename": "dynamic-leadership.json",
+                "description": "Build strategic leadership and conflict resolution skills",
+                "core_competencies": ["Strategic Leadership", "Public Speaking", "Interpersonal Communication", "Confidence"],
+                "status": "complete",
+                "type": "core"
+            },
+            {
+                "name": "Engaging Humor",
+                "filename": "engaging-humor.json",
+                "description": "Build your skills as a humorous and engaging public speaker",
+                "core_competencies": ["Strategic Leadership", "Public Speaking", "Interpersonal Communication", "Confidence"],
+                "status": "complete",
+                "type": "core"
+            },            {
+                "name": "Motivational Strategies",
+                "filename": "motivational-strategies.json",
+                "description": "Build motivational leadership and communication skills",
+                "core_competencies": ["Strategic Leadership", "Public Speaking", "Interpersonal Communication", "Confidence"],
+                "status": "complete",
+                "type": "core"
+            },            
+            {
+                "name": "Persuasive Influence",
+                "filename": "persuasive-influence.json",
+                "description": "Build skills to lead in complex situations",
+                "core_competencies": ["Strategic Leadership", "Public Speaking", "Interpersonal Communication", "Confidence"],
+                "status": "complete",
+                "type": "core"
+            },            {
+                "name": "Presentation Mastery",
+                "filename": "presentation-mastery.json",
+                "description": "Build public speaking skills",
+                "core_competencies": ["Public Speaking", "Confidence"],
+                "status": "complete",
+                "type": "core"
+            },            {
+                "name": "Visionary Communication",
+                "filename": "visionary-communication.json",
+                "description": "Build innovative communication and leadership skills",
+                "core_competencies": ["Strategic Leadership", "Public Speaking", "Interpersonal Communication", "Confidence"],
+                "status": "complete",
+                "type": "core"
+            },
+            {
+                "name": "Effective Coaching",
+                "filename": "effective-coaching.json",
+                "description": "Build coaching and mentoring skills",
+                "core_competencies": ["Coaching", "Mentoring", "Public Speaking"],
+                "status": "complete",
+                "type": "legacy"
+            },
+            {
+                "name": "Innovative Planning",
+                "filename": "innovative-planning.json",
+                "description": "Build planning and project management skills",
+                "core_competencies": ["Project Management", "Strategic Planning", "Public Speaking"],
+                "status": "complete",
+                "type": "legacy"
+            },
+            {
+                "name": "Leadership Development",
+                "filename": "leadership-development.json",
+                "description": "Build leadership and team management skills",
+                "core_competencies": ["Leadership", "Team Management", "Public Speaking"],
+                "status": "complete",
+                "type": "legacy"
+            },
+            {
+                "name": "Strategic Relationships",
+                "filename": "strategic-relationships.json",
+                "description": "Build strategic relationship and communication skills",
+                "core_competencies": ["Relationship Building", "Leadership", "Public Speaking"],
+                "status": "complete",
+                "type": "legacy"
+            },
+            {
+                "name": "Team Collaboration",
+                "filename": "team-collaboration.json",
+                "description": "Build collaboration and teamwork skills",
+                "core_competencies": ["Collaboration", "Teamwork", "Public Speaking"],
+                "status": "complete",
+                "type": "legacy"
+            }
+        ],
+        "usage_examples": {
+            "load_all_pathways": "Load all pathway files from the pathways/ directory",
+            "load_specific_pathway": "Load specific pathway file (e.g., pathways/dynamic-leadership.json)",
+            "compare_pathways": "Load multiple pathways to compare projects and requirements"
+        }
+    }
+}
