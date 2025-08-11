@@ -11,5 +11,9 @@ dependencies = [
     "urllib3",
     "requests",
     "reportlab",
-    "pandas"
+    "pandas",
+    "markdown_it-py",
+    "mdit-py-plugins",
+    "mdit-py-emoji",
+    "linkify-it-py"
 ]

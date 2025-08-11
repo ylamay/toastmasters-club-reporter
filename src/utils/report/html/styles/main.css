@@ -1,0 +1,410 @@
+/* CSS Custom Properties for Theme System */
+:root {
+  /* Light theme (default) */
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --primary: #2563eb;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --shadow: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-hover: 0 2px 6px rgba(0,0,0,0.12);
+  --hover-bg: rgba(37, 99, 235, 0.08);
+  --surface-alt: #f8fafc;
+}
+
+[data-theme="dark"] {
+  --bg: #0b1220;
+  --surface: #0f172a;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --primary: #60a5fa;
+  --border: #1e293b;
+  --border-light: #334155;
+  --shadow: none;
+  --shadow-hover: none;
+  --hover-bg: rgba(96, 165, 250, 0.1);
+  --surface-alt: #111827;
+}
+
+/* Base Styles */
+@page { size: A4; margin: 0.5in; }
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout Components */
+.report-container { max-width: 100%; margin: 0 auto; padding: 1rem; }
+
+.report-header {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-left { display: flex; flex-direction: column; gap: 0.25rem; }
+.club-title-row { display: flex; align-items: baseline; gap: 1rem; }
+.header-right { display: flex; align-items: center; gap: 0.75rem; }
+
+.report-header h1 {
+  color: var(--primary);
+  margin: 0;
+  font: 700 2rem/1 inherit;
+}
+
+.report-date {
+  color: var(--text-muted);
+  font: 500 0.8rem/1 inherit;
+}
+
+/* Navigation & Controls */
+.club-link {
+  color: var(--text-muted) !important;
+  text-decoration: none;
+  font: 500 0.9rem/1 inherit;
+  border: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.club-link:hover {
+  color: var(--primary) !important;
+  text-decoration: underline;
+}
+
+.nav-link, .theme-toggle {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: transparent;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.theme-toggle { border-radius: 999px; font-size: 0.95rem; }
+.nav-link:hover, .theme-toggle:hover { background: var(--hover-bg); }
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(250px, 280px) 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  height: 420px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.stats-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+.charts-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover { box-shadow: var(--shadow-hover); }
+
+.goals-card {
+  background: var(--surface-alt);
+  border: 2px dashed var(--border);
+  color: var(--text-muted);
+  padding: 0.75rem;
+}
+
+.metric-value {
+  font: bold 1.8rem/1 inherit;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  color: var(--text-muted);
+  font: 600 0.75rem/1 inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.goals-summary {
+  font: italic 0.8rem/1 inherit;
+  margin-top: 0.25rem;
+}
+
+/* Charts */
+.chart-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 220px;
+  max-height: 420px;
+}
+
+.chart-title {
+  font: 600 0.9rem/1 inherit;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.chart-container {
+  position: relative;
+  height: 180px;
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chart-container canvas {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* Member Section */
+.member-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font: 600 1.25rem/1 inherit;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.table-container {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+/* Tables */
+.members-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.members-table th,
+.members-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.85rem;
+}
+
+.members-table thead th {
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  font-weight: 700;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.members-table tbody tr:hover td {
+  background: var(--hover-bg);
+}
+
+.pathways-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pathways-table th {
+  background: var(--surface-alt);
+  padding: 0.75rem 1rem;
+  font: 600 0.875rem/1 inherit;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.pathways-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+/* UI Components */
+.chip {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font: 600 0.75rem/1 inherit;
+  color: var(--text);
+  background: var(--border);
+}
+
+.expand-btn {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--primary);
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.expand-btn:hover { background: var(--hover-bg); }
+
+.level-badge {
+  background: var(--border);
+  color: var(--primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font: 600 0.875rem/1 inherit;
+  text-align: center;
+}
+
+.progress-bar {
+  background: var(--border-light);
+  border-radius: 6px;
+  height: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar--sm { height: 6px; }
+
+.progress-fill {
+  background: linear-gradient(90deg, #059669, #10b981);
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.next-project {
+  color: #7c3aed;
+  font: 500 0.9rem/1 inherit;
+}
+
+.pathway-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.priority-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.priority-high { background: #ef4444; }
+.priority-medium { background: #f59e0b; }
+.priority-low { background: #10b981; }
+
+/* Detail Rows */
+.details-row { display: none; }
+.details-row.open { display: table-row; }
+.details-cell { padding: 0; background: var(--surface-alt); }
+.details-content { padding: 1rem 1.25rem; }
+.details-row.open .details-cell { border-left: 3px solid var(--primary); }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: minmax(200px, 240px) 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 1rem;
+  }
+  
+  .stats-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    overflow-y: visible;
+  }
+  
+  .charts-panel {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .member-section { height: 300px; }
+  .goals-placeholder { grid-column: 1 / -1; }
+}
+
+@media (max-width: 768px) {
+  .club-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .stats-panel { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media print {
+  body { background: white; }
+  .card, .chart-card, .member-section { break-inside: avoid; box-shadow: none; }
+  .details-row { display: table-row !important; }
+  .table-container { overflow: visible; height: auto; }
+  .member-section { height: auto; }
+}

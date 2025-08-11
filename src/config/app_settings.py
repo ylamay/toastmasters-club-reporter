@@ -10,8 +10,9 @@ SAVE_ENDPOINT_DATA = True
 # Location of the report files will be determined by the file manager (in session/reports)
 REPORT_TYPES = {
     'markdown': True,
-    'excel': True,  # Requires pandas
-    'pdf': True     # Requires reportlab
+    'html': True,     # Requires markdown-it-py | Will generate markdown if missing
+    'excel': True,    # Requires pandas
+    'pdf': True       # Requires reportlab
 }
 
 #-------------------------------------

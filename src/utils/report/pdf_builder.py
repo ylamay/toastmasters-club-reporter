@@ -1,10 +1,10 @@
-from reportlab.lib import colors
-from reportlab.lib.pagesizes import letter, inch
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable
-from reportlab.graphics.shapes import Drawing, String, Rect
-from reportlab.graphics.charts.piecharts import Pie
-from reportlab.graphics.charts.barcharts import VerticalBarChart
+from reportlab.lib import colors # type: ignore
+from reportlab.lib.pagesizes import letter, inch # type: ignore
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle # type: ignore
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable # type: ignore
+from reportlab.graphics.shapes import Drawing, String, Rect # type: ignore
+from reportlab.graphics.charts.piecharts import Pie # type: ignore
+from reportlab.graphics.charts.barcharts import VerticalBarChart # type: ignore
 from datetime import datetime
 import logging
 

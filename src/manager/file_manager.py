@@ -74,7 +74,7 @@ class FileManager:
             return data
 
         except Exception as e:
-            self.logger.error(f"Failed to load data from {filename}: {e}")
+            self.logger.warning(f"Failed to load data from {filename}: {e}")
             return {}
         
     def save_markdown(self, content: str, filename: str, target_dir_attr: str = None) -> bool:
@@ -107,6 +107,38 @@ class FileManager:
 
         except Exception as e:
             self.logger.error(f"Failed to write Markdown to {filename}: {e}")
+            return False
+        
+    def save_html(self, content: str, filename: str, target_dir_attr: str = None) -> bool:
+        """
+        Save a HTML file to a target location
+
+        Args:
+            content (str): HTML content to save
+            filename (str): Name of the file to save
+            target_dir_attr (str): Optional attribute name for a sub-directory within the session directory
+
+        Returns:
+            bool: True if save was successful, False otherwise
+        """
+        try:
+            # Validate extension
+            if not filename.endswith('.html'):
+                self.logger.error("Filename must end with .html")
+                return False
+
+            # Determine the target directory
+            file_path = self._construct_target_path(filename, target_dir_attr)
+
+            # Write the data to the file
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+
+            self.logger.info(f"HTML written to {file_path}")
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Failed to write HTML to {filename}: {e}")
             return False
 
     def save_excel(self, dataframes: dict, filename: str, target_dir_attr: str = None) -> bool:

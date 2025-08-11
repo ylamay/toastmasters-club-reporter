@@ -6,7 +6,7 @@ class MarkdownBuilder:
         self.content = []
         self.logger = logging.getLogger(__name__)
 
-    def generate_club_report(self, club) -> dict:
+    def generate_club_report(self, club) -> str:
         """
         Generate complete club report - main orchestration method
         
@@ -26,11 +26,8 @@ class MarkdownBuilder:
         # Add all sections
         self._add_club_overview(club)
         self.hr()
-        
-        self._add_pathway_distribution(club)
-        self.hr()
-        
-        self._add_level_distribution(club)
+
+        self._add_distribution(club)
         self.hr()
         
         self._add_member_progress(club)
@@ -95,7 +92,7 @@ class MarkdownBuilder:
         total_pathways = sum(club.distribution.pathway_distribution.values())
         avg_pathways = round(total_pathways / stats.total_members, 1) if stats.total_members > 0 else 0
         
-        self.h2("📊 Club Overview")
+        self.h2(":scroll: Club Overview")
         overview_data = [
             ["**Total Members**", stats.total_members],
             ["**Active Members**", stats.active_members], 
@@ -105,11 +102,22 @@ class MarkdownBuilder:
         ]
         self.table(["Metric", "Value"], overview_data)
 
+    def _add_distribution(self, club: dict):
+        """
+        Add distribution section with pathway and level distributions
+        """
+        self.h2(":bar_chart: Distribution")
+
+        self._add_pathway_distribution(club)
+        
+        self._add_level_distribution(club)             
+
     def _add_pathway_distribution(self, club: dict):
         """
         Add pathway distribution with progress bars
         """
-        self.h2("🛤️ Pathway Distribution")
+        self.text("<details>")
+        self.text("<summary>Open to view Pathway Distribution</summary>")
         
         total_pathways = sum(club.distribution.pathway_distribution.values())
         
@@ -117,14 +125,17 @@ class MarkdownBuilder:
                                    key=lambda x: x[1], reverse=True):
             percentage = round((count / total_pathways * 100), 1) if total_pathways > 0 else 0
             progress_bar = self.progress_bar(percentage)
-            self.text(f"**{pathway}**: {count} members ({percentage}%)")
+            self.text(f"**{pathway}**: {count} members")
             self.text(progress_bar)
+
+        self.text("</details>")
 
     def _add_level_distribution(self, club: dict):
         """
         Add level distribution with progress bars
         """
-        self.h2("📈 Level Distribution")
+        self.text("<details>")
+        self.text("<summary>Open to view Level Distribution</summary>")
 
         total_members = sum(club.distribution.level_distribution.values())
         
@@ -135,14 +146,18 @@ class MarkdownBuilder:
         for level, count in sorted_levels:
             percentage = round((count / total_members * 100), 1) if total_members > 0 else 0
             progress_bar = self.progress_bar(percentage)
-            self.text(f"**Level {level}**: {count} pathways ({percentage}%)")
+            self.text(f"**Level {level}**: {count} pathways")
             self.text(progress_bar)
+
+        self.text("</details>")
 
     def _add_member_progress(self, club: dict):
         """
         Add member progress section
         """
-        self.h2("👥 Member Progress")
+        self.h2(":busts_in_silhouette: Member Progress")
+        self.text("<details>")
+        self.text("<summary>Open to view Member Progress</summary>")        
 
         # Group members by highest level
         advanced_members = []  # Level 3+
@@ -166,7 +181,7 @@ class MarkdownBuilder:
         
         # Advanced Members (with multiple pathway details)
         if advanced_members:
-            self.h3("🌟 Advanced Members (Level 3+)")
+            self.h3(":star2: Advanced Members (Level 3+)")
             for member_data in sorted(advanced_members, 
                                     key=lambda x: max(p.completion_percentage for p in x['member'].current_pathways), 
                                     reverse=True):
@@ -174,7 +189,7 @@ class MarkdownBuilder:
         
         # Beginning Members (simple table)
         if beginning_members:
-            self.h3("🚀 Beginning Members (Level 1-2)")
+            self.h3(":rocket: Beginning Members (Level 1-2)")
             member_rows = []
             for member_data in sorted(beginning_members, 
                                     key=lambda x: max(p.completion_percentage for p in x['member'].current_pathways), 
@@ -187,11 +202,13 @@ class MarkdownBuilder:
                 member_rows.append([
                     self.bold(f"{member.first_name} {member.last_name}"),
                     primary_pathway.name,
-                    f"{progress_bar} {primary_pathway.completion_percentage}%",
+                    f"{progress_bar}",
                     next_project
                 ])
             
             self.table(["Member", "Primary Pathway", "Progress", "Next Project"], member_rows)
+
+        self.text("</details>")
 
     def _add_advanced_member(self, member_data: dict):
         """
@@ -224,7 +241,7 @@ class MarkdownBuilder:
             pathway_rows.append([
                 self.bold(pathway.name),
                 pathway.current_level,
-                f"{progress_bar} {pathway.completion_percentage}%",
+                f"{progress_bar}",
                 next_project
             ])
         
@@ -235,7 +252,9 @@ class MarkdownBuilder:
         """
         Add actionable next steps
         """
-        self.h2("🎯 Immediate Next Steps")
+        self.h2(":dart: Immediate Next Steps")
+        self.text("<details>")
+        self.text("<summary>Open to view Next Steps</summary>")        
 
         # Analyze member data for specific actions
         elective_choices = []
@@ -252,7 +271,7 @@ class MarkdownBuilder:
                     first_speeches.append(f"**{member.first_name} {member.last_name}**: {project.name} ({project.pathway_name})")
         
         # Priority Actions
-        self.h3("🔥 Priority Actions Needed:")
+        self.h3(":fire: Priority Actions Needed:")
         
         if first_speeches:
             self.text("\n**First Pathway Speech Opportunities:**")
@@ -265,18 +284,20 @@ class MarkdownBuilder:
                 self.text(f"- {choice}")
         
         # Club Goals
-        self.h3("🏆 Club Goals:")
+        self.h3(":trophy: Club Goals:")
         goals = []
         if first_speeches:
-            goals.append(f"📈 Get {len(first_speeches)} new member{'s' if len(first_speeches) > 1 else ''} started with Ice Breaker speeches")
+            goals.append(f":chart_with_upwards_trend: Get {len(first_speeches)} new member{'s' if len(first_speeches) > 1 else ''} started with Ice Breaker speeches")
         if elective_choices:
-            goals.append(f"🎯 Support {len(elective_choices)} member{'s' if len(elective_choices) > 1 else ''} with elective choices")            
+            goals.append(f":dart: Support {len(elective_choices)} member{'s' if len(elective_choices) > 1 else ''} with elective choices")            
         
         # Check for members close to completion
         near_completion = [m for m in club.members.values() 
                           if any(p.completion_percentage > 80 for p in m.current_pathways)]
         if near_completion:
-            goals.append("🌟 Celebrate upcoming pathway completions")
+            goals.append(":star2: Celebrate upcoming pathway completions")
         
         for goal in goals:
             self.text(f"- {goal}")
+
+        self.text("</details>")

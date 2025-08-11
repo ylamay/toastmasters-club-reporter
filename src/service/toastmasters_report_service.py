@@ -1,5 +1,6 @@
 from manager.file_manager import FileManager
 from utils.report.markdown_builder import MarkdownBuilder
+from utils.report.html.html_builder import HTMLBuilder
 from utils.report.excel_builder import ExcelBuilder
 from utils.report.pdf_builder import PDFBuilder
 import logging
@@ -16,6 +17,7 @@ class ToastmastersReportService:
     def __init__(self, file_manager: FileManager, app_settings):
         self.file_manager = file_manager
         self.app_settings = app_settings
+        self.markdown = None
         self.logger = logging.getLogger(__name__)
 
     def generate_reports(self, clubs: dict):
@@ -41,6 +43,8 @@ class ToastmastersReportService:
         for report_type in report_types:
             if report_type == "markdown":
                 self._generate_markdown_report(club)
+            elif report_type == "html":
+                self._generate_html_report(club)
             elif report_type == "excel":
                 self._generate_excel_report(club)
             elif report_type == "pdf":
@@ -55,7 +59,7 @@ class ToastmastersReportService:
         Returns:
             list: List of enabled report types
         """
-        report_keys = ["markdown", "excel", "pdf"]
+        report_keys = ["markdown", "html", "excel", "pdf"]
         return [
             key for key in report_keys 
             if self.app_settings.REPORT_TYPES.get(key, False)
@@ -76,6 +80,7 @@ class ToastmastersReportService:
         # Generate the markdown report
         builder = MarkdownBuilder()
         content = builder.generate_club_report(club)
+        self.markdown = content
         
         # Save the report
         filename = f"{club.club_name.lower().replace(' ', '_')}_report.md"        
@@ -89,6 +94,32 @@ class ToastmastersReportService:
             self.logger.info(f"Markdown report generated: {filename}")
         else:
             self.logger.warning(f"Failed to save Markdown report: {filename}")
+
+    def _generate_html_report(self, club: dict):
+        """ 
+        Generate an HTML report from the club data
+
+        Args:
+            club (dict): Club summary data
+        """
+        self.logger.info("Generating HTML report")
+
+        # Generate the HTML report
+        builder = HTMLBuilder()
+        content = builder.generate_club_report(club)
+
+        # Save the report
+        filename = f"{club.club_name.lower().replace(' ', '_')}_report.html"
+        success = self.file_manager.save_html(
+            content,
+            filename,
+            "reports_directory"
+        )
+
+        if success:
+            self.logger.info(f"HTML report generated: {filename}")
+        else:
+            self.logger.warning(f"Failed to save HTML report: {filename}")
 
     def _generate_excel_report(self, club: dict):
         """
