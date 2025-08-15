@@ -1,7 +1,7 @@
 [project]
-name = "toastmasters-report-scrape"
-version = "0.1.0"
-description = "Add your description here"
+name = "toastmasters-club-reporter"
+version = "1.0.0"
+description = "A Python application that collects club and member data from Toastmasters International APIs and generates comprehensive reports in multiple formats."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

@@ -56,26 +56,31 @@ class Club:
         distribution (Distribution): Distribution object containing pathway and level distributions.
         logger (logging.Logger): Logger for logging club activities.
     """
-    def __init__(self, club_id: str, club_name: str, members: dict = None):
+    def __init__(self, club_id: str, club_name: str, dashboard_club_id: str, members: dict = None):
         self.club_id = club_id
         self.club_name = club_name
+        self.dashboard_club_id = dashboard_club_id
         self.members = members or {}
         self.statistics = None
         self.distribution = None
         self.logger = logging.getLogger(__name__)
 
-    def generate_summary(self):
+    def generate_summary(self, member_enrollment_status: list):
         """
         Generate a summary of the club's activities and member progress.
+
+        Args:
+            member_enrollment_status (list): List of member enrollment statuses
 
         Returns:
             None
         """
         # General counts
-        total_members = len(self.members)
+        paid_members = [member for member in member_enrollment_status if member.get('is_paid', False)]
+        total_members = len(paid_members)
         active_members = sum(
-            1 for member in self.members.values() 
-            if member.summary.active_pathways > 0
+            1 for member in paid_members
+            if member.get('is_enrolled', False)
         )
 
         # Pathway stats
@@ -113,6 +118,7 @@ class Club:
         return {
             "club_id": self.club_id,
             "club_name": self.club_name,
+            "dashboard_club_id": self.dashboard_club_id,
             "statistics": self.statistics.to_dict() if self.statistics else None,
             "distribution": self.distribution.to_dict() if self.distribution else None,
             "members": [member.to_dict() for member in self.members.values()]

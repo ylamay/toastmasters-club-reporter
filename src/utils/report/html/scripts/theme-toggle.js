@@ -19,17 +19,12 @@ const themeConfig = {
 function applyTheme(themeName) {
   const config = themeConfig[themeName] || themeConfig.light;
   
-  // Update data-theme attribute for CSS custom properties
   document.documentElement.setAttribute('data-theme', themeName);
-  
-  // Store preference
   localStorage.setItem(THEME_KEY, themeName);
   
-  // Update toggle button
   const btn = document.getElementById('themeToggle');
-  if (btn) btn.textContent = (themeName === 'dark') ? '☀️' : '🌙';
+  if (btn) btn.textContent = (themeName === 'dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
   
-  // Update charts if available
   updateChartColors(config.chart);
 }
 
@@ -37,7 +32,7 @@ function updateChartColors(chartConfig) {
   if (window._pathwayChart) {
     const ds = window._pathwayChart.data.datasets[0];
     ds.backgroundColor = chartConfig.doughnut.slice(0, ds.data.length);
-    window._pathwayChart.update('none'); // No animation for smoother experience
+    window._pathwayChart.update('none');
   }
   
   if (window._levelChart) {
@@ -48,14 +43,12 @@ function updateChartColors(chartConfig) {
   }
 }
 
-// Initialize theme on load
 function initTheme() {
   const savedTheme = localStorage.getItem(THEME_KEY) || 
     (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   applyTheme(savedTheme);
 }
 
-// Setup theme toggle
 function setupThemeToggle() {
   const toggleBtn = document.getElementById('themeToggle');
   if (toggleBtn) {
@@ -67,13 +60,17 @@ function setupThemeToggle() {
   }
 }
 
-// Auto-initialize
+// Initialize everything
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     setupThemeToggle();
+    initializeCharts();
+    setupTableExpansion();
   });
 } else {
   initTheme();
   setupThemeToggle();
+  initializeCharts();
+  setupTableExpansion();
 }

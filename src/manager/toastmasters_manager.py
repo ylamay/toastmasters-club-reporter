@@ -21,7 +21,9 @@ class ToastmastersManager:
         report_service: ToastmastersReportService instance for generating reports
         user_id: ID of the authenticated user
         club_id: ID of the club associated with the user
+        dashboard_club_id: ID of the club used in the club status dashboard
         session_data: Data associated with the current user session
+        member_enrollment_status: List of member enrollment statuses
         data_output: Dictionary to store fetched data from API endpoints
         members: Dictionary to store member data indexed by user ID
         club: Club data indexed by club ID
@@ -37,7 +39,9 @@ class ToastmastersManager:
         self.report_service = ToastmastersReportService(self.file_manager, app_settings)
         self.user_id = None
         self.club_id = None
+        self.dashboard_club_id = None
         self.session_data = None
+        self.member_enrollment_status = None
         self.data_output = {}
         self.members = {}
         self.club = {}
@@ -61,12 +65,15 @@ class ToastmastersManager:
             self.logger.info("Found existing session object")
             self.user_id = existing_session.get('user_id')
             self.club_id = existing_session.get('club_id')
+            self.dashboard_club_id = existing_session.get('dashboard_club_id')
             self.session_data = existing_session
+            self.member_enrollment_status = existing_session.get('member_enrollment_status')
         
         # Force re-authentication if missing any details
-        if not any(val is None for val in [self.user_id, self.club_id, self.session_data]):
+        if not any(val is None for val in [self.user_id, self.club_id, self.dashboard_club_id, self.session_data, self.member_enrollment_status]):
             return
-        
+        self.logger.info("No valid session found, proceeding with authentication")
+
         # Authenticate if applicable
         email = self.env_manager.email
         password = self.env_manager.password
@@ -74,7 +81,7 @@ class ToastmastersManager:
         auth_result = await self.authenticator.authenticate(email, password, club_name)
 
         if auth_result:
-            self.user_id, self.club_id, self.session_data = auth_result
+            self.user_id, self.club_id, self.dashboard_club_id, self.session_data, self.member_enrollment_status = auth_result
         else:
             self.logger.error("Authentication failed")
             raise ValueError("Authentication failed: auth_result returned empty")
@@ -122,7 +129,13 @@ class ToastmastersManager:
         self.members = self.data_service.build_member_index(self.data_output)
 
         # Build the club index
-        self.club = self.data_service.build_club_index(self.club_id, self.env_manager.club_name, self.members)
+        self.club = self.data_service.build_club_index(
+            self.club_id,
+            self.env_manager.club_name,
+            self.dashboard_club_id,
+            self.members,
+            self.member_enrollment_status
+        )
 
     def generate_reports(self):
         """
@@ -132,8 +145,8 @@ class ToastmastersManager:
             if not self.members or not self.club:
                 self.logger.warning("No members or club data available for report generation")
                 return
-            
-            self.report_service.generate_reports(self.club)
+
+            self.report_service.generate_reports(self.club, self.member_enrollment_status)
             self.logger.info("Reports generated successfully")
 
         except Exception as e:

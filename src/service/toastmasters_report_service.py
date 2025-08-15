@@ -20,12 +20,13 @@ class ToastmastersReportService:
         self.markdown = None
         self.logger = logging.getLogger(__name__)
 
-    def generate_reports(self, clubs: dict):
+    def generate_reports(self, clubs: dict, member_enrollment_status: list):
         """
         Generate all requested report types
 
         Args:
             clubs (dict): Dictionary of Club objects by club_id
+            member_enrollment_status (list): List of member enrollment statuses
         """
         report_types = self._get_enabled_report_types()
         if not report_types:
@@ -44,7 +45,7 @@ class ToastmastersReportService:
             if report_type == "markdown":
                 self._generate_markdown_report(club)
             elif report_type == "html":
-                self._generate_html_report(club)
+                self._generate_html_report(club, member_enrollment_status)
             elif report_type == "excel":
                 self._generate_excel_report(club)
             elif report_type == "pdf":
@@ -95,18 +96,23 @@ class ToastmastersReportService:
         else:
             self.logger.warning(f"Failed to save Markdown report: {filename}")
 
-    def _generate_html_report(self, club: dict):
+    def _generate_html_report(self, club: dict, member_enrollment_status: list):
         """ 
         Generate an HTML report from the club data
 
         Args:
             club (dict): Club summary data
+            member_enrollment_status (list): List of member enrollment statuses
         """
         self.logger.info("Generating HTML report")
 
+        # Get the club status report url
+        api_template = self.app_settings.API_ENDPOINTS['club_status_report']
+        club_status_url = api_template.replace("{dashboard_club_id}", club.dashboard_club_id.replace("CB-", ""))
+
         # Generate the HTML report
         builder = HTMLBuilder()
-        content = builder.generate_club_report(club)
+        content = builder.generate_club_report(club, club_status_url, member_enrollment_status)
 
         # Save the report
         filename = f"{club.club_name.lower().replace(' ', '_')}_report.html"

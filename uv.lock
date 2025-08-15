@@ -377,8 +377,8 @@ wheels = [
 ]
 
 [[package]]
-name = "toastmasters-report-scrape"
-version = "0.1.0"
+name = "toastmasters-club-reporter"
+version = "1.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "linkify-it-py" },

@@ -120,24 +120,26 @@ class ToastmastersDataService:
 
         self.logger.info(f"Built member index for {len(members)} members")
         return members
-    
-    def build_club_index(self, club_id: str, club_name: str, members: dict):
+
+    def build_club_index(self, club_id: str, club_name: str, dashboard_club_id: str, members: dict, member_enrollment_status: list):
         """
         Build comprehensive club index from all member data
 
         Args:
             club_id (str): ID of the club
             club_name (str): Name of the club
+            dashboard_club_id (str): ID of the club used in the club status dashboard
             members (dict): Dictionary of Member objects indexed by username
+            member_enrollment_status (list): List of member enrollment statuses
 
         Returns:
             Club: Club object containing all members and their summaries
         """
         # Create a club instance
-        club = Club(club_id, club_name, members)
+        club = Club(club_id, club_name, dashboard_club_id, members)
 
         # Generate the club summary
-        club.generate_summary()
+        club.generate_summary(member_enrollment_status)
         
         self.logger.info(f"Built club index for {len(members)} members")
 

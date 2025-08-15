@@ -20,6 +20,7 @@ REPORT_TYPES = {
 #-------------------------------------
 LOGIN_URL = "https://www.toastmasters.org/login"
 BASECAMP_URL = "https://app.basecamp.toastmasters.org/dashboard"
+CLUB_CENTRAL_URL = "https://www.toastmasters.org/my-toastmasters/profile/club-central"
 
 #-------------------------------------
 # Full list of endpoints to call (Don't change these unless you need to add new endpoints)
@@ -32,5 +33,6 @@ API_ENDPOINTS = {
     'overview': 'https://basecamp.toastmasters.org/api/bcm/member/overview/?club={club_id}&page={page}',
     'progress': 'https://basecamp.toastmasters.org/api/bcm/progress/?club={club_id}&page={page}',
     'progress_detail': 'https://basecamp.toastmasters.org/api/bcm/progress/{course_id}/detail?user={username}',
-    'profile': 'https://basecamp.toastmasters.org/api/ti/profile/{user_id}/about/'
+    'profile': 'https://basecamp.toastmasters.org/api/ti/profile/{user_id}/about/',
+    'club_status_report': "https://dashboards.toastmasters.org/ClubReport.aspx?id={dashboard_club_id}" # Without the "CB-" prefix
 }
