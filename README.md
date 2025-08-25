@@ -2,10 +2,6 @@
 
 A Python application that collects club and member data from Toastmasters International APIs and generates comprehensive reports in multiple formats.
 
-**WORK IN PROGRESS**
-- Updating report outputs
-- Code cleanup
-
 ## Overview
 
 This tool helps Toastmasters club officers automate the process of gathering member progress data and generating detailed reports. It authenticates with Toastmasters International's web platform, collects data about club members and their pathway progress, and generates reports in markdown, Excel, and PDF formats.
@@ -17,6 +13,45 @@ This tool helps Toastmasters club officers automate the process of gathering mem
 - **Pathway Analysis**: Analyzes member progress across various Toastmasters pathways
 - **Configurable Reports**: Customize report generation through configuration settings
 - **Session Management**: Handles authentication and session management automatically
+
+## :camera: Report Examples
+
+*See what your club reports will look like with these examples:*
+
+> :bulb: **Note**: Sample data shown with masked member names for privacy. Your reports will display actual member information.
+
+### Interactive HTML Dashboard
+<details>
+<summary>Open to view HTML Dashboard</summary>
+
+![Club Overview Dashboard](docs/images/html_report_full.png)
+*Complete club status with member statistics, enrollment tracking, and pathway distribution*
+
+![Club Progress Dashboard](docs/images/html_report_bottom.png)
+*Expand member progress overview table for pathway breakdown summary*
+
+</details>
+
+### Markdown Report
+<details>
+<summary>Open to view Markdown Report</summary>
+
+![Markdown Summary Report](docs/images/markdown_report_full.png)
+*Overall club status with member statistics, pathway distribution, and focused next step summaries*
+
+![Markdown Progress Report](docs/images/markdown_report_partial.png)
+*Expand member progress section for pathway breakdown summary*
+
+</details>
+
+### Excel Report
+<details>
+<summary>Open to view Excel Report</summary>
+
+![Excel Summary Report](docs/images/excel_report_full.png)
+*Overall club status with member statistics and pathway distribution in an editable format*
+
+</details>
 
 ## Prerequisites
 
