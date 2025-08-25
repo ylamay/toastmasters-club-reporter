@@ -1,6 +1,6 @@
 [project]
 name = "toastmasters-club-reporter"
-version = "1.0.0"
+version = "1.0.1"
 description = "A Python application that collects club and member data from Toastmasters International APIs and generates comprehensive reports in multiple formats."
 readme = "README.md"
 requires-python = ">=3.13"
@@ -11,9 +11,5 @@ dependencies = [
     "urllib3",
     "requests",
     "reportlab",
-    "pandas",
-    "markdown_it-py",
-    "mdit-py-plugins",
-    "mdit-py-emoji",
-    "linkify-it-py"
+    "pandas"
 ]
