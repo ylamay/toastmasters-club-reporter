@@ -24,10 +24,12 @@ This tool helps Toastmasters club officers automate the process of gathering mem
 <details>
 <summary>Open to view HTML Dashboard</summary>
 
-![Club Overview Dashboard](docs/images/html_report_full.png)
+<img width="1587" height="1272" alt="image" src="https://github.com/user-attachments/assets/58f69007-ae6f-4213-8773-cccb8189bc5a" />
+
 *Complete club status with member statistics, enrollment tracking, and pathway distribution*
 
-![Club Progress Dashboard](docs/images/html_report_bottom.png)
+<img width="1573" height="752" alt="image" src="https://github.com/user-attachments/assets/411b5f28-b18e-46c4-99bf-630a0f28acbb" />
+
 *Expand member progress overview table for pathway breakdown summary*
 
 </details>
@@ -36,10 +38,12 @@ This tool helps Toastmasters club officers automate the process of gathering mem
 <details>
 <summary>Open to view Markdown Report</summary>
 
-![Markdown Summary Report](docs/images/markdown_report_full.png)
+<img width="649" height="759" alt="image" src="https://github.com/user-attachments/assets/363f4ba8-c491-4179-bfad-43bd8dea8a9f" />
+
 *Overall club status with member statistics, pathway distribution, and focused next step summaries*
 
-![Markdown Progress Report](docs/images/markdown_report_partial.png)
+<img width="687" height="698" alt="image" src="https://github.com/user-attachments/assets/b948fcde-b6cd-46f4-98f2-7f38e3c00b88" />
+
 *Expand member progress section for pathway breakdown summary*
 
 </details>
@@ -48,7 +52,8 @@ This tool helps Toastmasters club officers automate the process of gathering mem
 <details>
 <summary>Open to view Excel Report</summary>
 
-![Excel Summary Report](docs/images/excel_report_full.png)
+<img width="1195" height="827" alt="image" src="https://github.com/user-attachments/assets/71262730-272b-404e-96df-257e17da97e9" />
+
 *Overall club status with member statistics and pathway distribution in an editable format*
 
 </details>
